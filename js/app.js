@@ -10,7 +10,18 @@ let wdinstagramData = [
 
 angular
   .module("wdinstagramApp", ["ui.router"])
+  .config(["$stateProvider", Router])
   .controller("wdinstagramCtrl", [ wdinstagramController])
+
+function Router($stateProvider){
+  $stateProvider
+  .state("index", {
+    url: "/wdinstagram",
+    templateUrl: "js/ng-views/index.html",
+    controller: "wdinstagramCtrl",
+    controllerAs: "vm"
+  })
+}
 
 function wdinstagramController () {
   this.wdinstagram = wdinstagramData

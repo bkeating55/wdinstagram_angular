@@ -1,0 +1,7 @@
+<h2>These are all the Photos</h2>
+
+<div data-ng-repeat="wdinstagram in vm.wdinstagram">
+  <p>{{wdinstagram.author}}</p>
+  <p>{{wdinstagram.body}}</p>
+  <img ng-src="{{wdinstagram.photo_url}}">
+</div>
